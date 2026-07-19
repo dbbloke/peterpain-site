@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <title>£0 platform — Peter Pain</title>
+  <style>
+    :root { --bg:#05080f; --fg:#e8ecf3; --muted:#8b95a7; --dim:#566074; --cyan:#4cc2ff;
+      --violet:#8b7cff; --green:#4ade80; --amber:#fbbf24; --border:rgba(148,163,184,.14);
+      --border-hi:rgba(76,194,255,.4); --card:rgba(13,20,36,.72);
+      --mono:"SF Mono",ui-monospace,"Cascadia Code",Menlo,Consolas,monospace; }
+    *{box-sizing:border-box;margin:0}
+    body{font-family:system-ui,-apple-system,"Segoe UI",sans-serif;background:var(--bg);
+      color:var(--fg);line-height:1.6;-webkit-font-smoothing:antialiased}
+    .glow{position:fixed;inset:0;z-index:-1;pointer-events:none;background:
+      radial-gradient(ellipse 70% 45% at 50% -5%,rgba(76,194,255,.11),transparent 60%)}
+    .wrap{max-width:900px;margin:0 auto;padding:0 22px}
+    nav{display:flex;align-items:center;padding:20px 0;font-size:.85rem}
+    .brand{font-family:var(--mono);color:var(--fg);text-decoration:none}
+    .brand b{color:var(--cyan)}
+    nav a.back{margin-left:auto;color:var(--muted);text-decoration:none;font-family:var(--mono);font-size:.78rem}
+    nav a.back:hover{color:var(--cyan)}
+    header{padding:44px 0 10px;text-align:center}
+    .tag{font-family:var(--mono);font-size:.68rem;letter-spacing:.12em;text-transform:uppercase;
+      color:var(--amber);border:1px solid rgba(251,191,36,.4);padding:3px 12px;border-radius:99px}
+    h1{font-size:clamp(1.8rem,5vw,2.6rem);letter-spacing:-.02em;margin-top:16px}
+    .sub{color:var(--muted);margin-top:10px;max-width:52ch;margin-inline:auto}
+    .diagram{border:1px solid var(--border);border-radius:18px;background:var(--card);
+      margin-top:36px;padding:26px 20px;box-shadow:0 24px 70px rgba(0,0,0,.5)}
+    svg{width:100%;height:auto;display:block}
+    .nb{fill:rgba(15,23,42,.9);stroke:var(--border)}
+    .nl{fill:var(--fg);font-family:var(--mono);font-size:11px;text-anchor:middle}
+    .ns{fill:var(--dim);font-family:var(--mono);font-size:8.5px;text-anchor:middle}
+    .ring{fill:none;stroke-width:1.6;opacity:.55}
+    .orbit{animation:orb 14s linear infinite;transform-origin:390px 130px}
+    .orbit.r{animation-direction:reverse;animation-duration:19s}
+    @keyframes orb{to{transform:rotate(360deg)}}
+    .core{animation:cg 3.4s ease-in-out infinite;transform-origin:390px 130px}
+    @keyframes cg{50%{filter:drop-shadow(0 0 16px rgba(76,194,255,.7))}}
+    .flow{stroke:var(--cyan);stroke-width:2;fill:none;stroke-dasharray:8 7;
+      animation:dash 1.3s linear infinite;opacity:.8}
+    .flow.v{stroke:var(--violet);animation-duration:1.7s}
+    @keyframes dash{to{stroke-dashoffset:-15}}
+    .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:36px}
+    .b{border:1px solid var(--border);border-radius:14px;background:var(--card);padding:20px}
+    .b h3{font-size:.92rem;color:var(--cyan);font-family:var(--mono);font-weight:600}
+    .b p{font-size:.84rem;color:var(--muted);margin-top:6px}
+    .cta{text-align:center;padding:52px 0 60px}
+    .btn{display:inline-flex;padding:12px 26px;border-radius:10px;font-weight:600;
+      font-size:.95rem;text-decoration:none;margin:0 6px}
+    .btn-p{background:linear-gradient(92deg,#1d9bf0,#3573f0);color:#fff}
+    .btn-g{color:var(--fg);border:1px solid var(--border)}
+    @media(max-width:760px){.grid{grid-template-columns:1fr}}
+    @media(prefers-reduced-motion:reduce){*{animation:none!important}}
+  </style>
+</head>
+<body>
+  <div class="glow"></div>
+  <div class="wrap">
+    <nav><a class="brand" href="/"><b>~</b>/peterpain</a><a class="back" href="/">← back</a></nav>
+    <header>
+      <span class="tag">🏗 the estate</span>
+      <h1>A platform for £0/month</h1>
+      <p class="sub">One box, production habits: GitOps, self-hosted runners, local inference, tiered NVMe/HDD storage that spins down and heals itself, tunnels to the edge.</p>
+    </header>
+
+    <div class="diagram">
+      <svg viewBox="0 0 780 260">
+        <circle class="ring" cx="390" cy="130" r="62" stroke="rgba(76,194,255,.5)"/>
+        <circle class="ring" cx="390" cy="130" r="100" stroke="rgba(139,124,255,.4)"/>
+        <g class="core">
+          <rect class="nb" x="336" y="106" width="108" height="48" rx="12" style="stroke:var(--cyan)"/>
+          <text class="nl" x="390" y="126">proxmox</text>
+          <text class="ns" x="390" y="140">128GB · 4TB nvme · 96TB nas</text>
+        </g>
+        <g class="orbit">
+          <g transform="translate(390 68)"><circle r="15" fill="rgba(15,23,42,.95)" stroke="rgba(76,194,255,.5)"/><text class="ns" y="3" style="fill:var(--fg)">ci</text></g>
+          <g transform="translate(390 192)"><circle r="15" fill="rgba(15,23,42,.95)" stroke="rgba(76,194,255,.5)"/><text class="ns" y="3" style="fill:var(--fg)">dns</text></g>
+        </g>
+        <g class="orbit r">
+          <g transform="translate(290 130)"><circle r="17" fill="rgba(15,23,42,.95)" stroke="rgba(139,124,255,.5)"/><text class="ns" y="3" style="fill:var(--fg)">llm</text></g>
+          <g transform="translate(490 130)"><circle r="17" fill="rgba(15,23,42,.95)" stroke="rgba(139,124,255,.5)"/><text class="ns" y="3" style="fill:var(--fg)">git</text></g>
+        </g>
+        <g>
+          <rect class="nb" x="50" y="36" width="130" height="38" rx="10"/>
+          <text class="nl" x="115" y="59" style="font-size:10px">cloudflare edge</text>
+        </g>
+        <path class="flow" d="M180 55 Q 290 55 342 108"/>
+        <g>
+          <rect class="nb" x="600" y="188" width="130" height="38" rx="10"/>
+          <text class="nl" x="665" y="211" style="font-size:10px">github actions</text>
+        </g>
+        <path class="flow v" d="M600 206 Q 500 206 442 150"/>
+        <g>
+          <rect class="nb" x="600" y="36" width="130" height="38" rx="10"/>
+          <text class="nl" x="665" y="52" style="font-size:10px">tiered storage</text>
+          <text class="ns" x="665" y="66">nvme cache → hdd + parity</text>
+        </g>
+        <path class="flow" d="M600 55 Q 490 55 438 108"/>
+        <g>
+          <rect class="nb" x="50" y="188" width="130" height="38" rx="10"/>
+          <text class="nl" x="115" y="204" style="font-size:10px">services</text>
+          <text class="ns" x="115" y="218">git · vault · dns · docs · media</text>
+        </g>
+        <path class="flow v" d="M180 206 Q 280 206 338 150"/>
+      </svg>
+    </div>
+
+    <div class="grid">
+      <div class="b"><h3>gitops everything</h3><p>VMs and LXCs from code. Golden images, cloud-init, drift caught on schedule.</p></div>
+      <div class="b"><h3>storage that thinks</h3><p>NVMe landing zone, nightly tiering to HDD with parity + bitrot scrubs, disks asleep by day.</p></div>
+      <div class="b"><h3>edge without ports</h3><p>Cloudflare tunnels publish services; nothing inbound is open. demo.peterpain.com is one of them.</p></div>
+    </div>
+
+    <div class="cta">
+      <a class="btn btn-p" href="https://demo.peterpain.com" target="_blank" rel="noopener">Live demo</a>
+      <a class="btn btn-g" href="https://github.com/dbbloke/homelab-ai-cicd" target="_blank" rel="noopener">Source</a>
+    </div>
+  </div>
+</body>
+</html>
