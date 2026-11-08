@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Peter Pain — Curriculum Vitae</title><meta name="description" content="Peter Pain: public CV covering platform engineering, SRE, AWS and database engineering.">
+<link rel="stylesheet" href="assets/site.css"><script defer src="assets/site.js"></script></head>
+<body class="cv-page"><a class="skip-link" href="#profile">Skip to CV</a><div class="wrap"><nav aria-label="CV navigation"><a class="brand" href="index.html">Peter <b>Pain</b></a><div class="links"><a href="index.html">Home</a><a href="#profile">Profile</a><a href="#career">Career</a><a href="#work">Selected work</a><a href="#skills">Skills</a><button type="button" id="print-cv">Print / save PDF</button></div></nav>
+<main><header id="profile"><div class="eyebrow">Public curriculum vitae · November 2026 · v2 preview</div><h1>Peter <span class="grad">Pain</span></h1><p class="lead"><strong>Senior platform and infrastructure engineer</strong><br>Platform · SRE · Cloud · Database engineering<br>Hastings, UK</p><p>Three decades across production systems, from Informix and UNIX through AWS and regulated infrastructure. Systems thinking, evidence-led diagnosis, delivery automation, security and operational resilience, with AI-assisted engineering under human verification and change control.</p><p class="availability">Not actively job hunting before Christmas 2026; considering the next chapter after Christmas.</p></header>
+<section id="career"><div class="kicker">01 / Employment history</div><h2>Career</h2><div class="timeline"><article class="job">
+<div class="when">Apr 2019 — present</div>
+<div>
+<h3>Technical Specialist, Infrastructure Product Group (SRE)</h3>
+<div class="org">UK financial regulator</div>
+<p>Linux estate management, AWS, infrastructure as code, delivery automation, certificate and secrets lifecycles, observability and operational resilience. Covers the whole platform lifecycle: investigate a hard problem, document design and risk, execute controlled production change, then hand the service to a team that can own it.</p>
+</div>
+</article><article class="job">
+<div class="when">Apr 2016 — Aug 2018</div>
+<div>
+<h3>Cloud Support Engineer, Database Services</h3>
+<div class="org">Amazon Web Services</div>
+<p>Customer-facing specialist for managed database services — Redshift, Aurora, MySQL, MariaDB, Oracle, PostgreSQL and SQL Server — resolving incidents and guiding architecture and cost decisions. Wrote tooling that automated common specialist tasks, trained colleagues, and interviewed new engineers.</p>
+</div>
+</article><article class="job">
+<div class="when">Jan 2015 — Apr 2016</div>
+<div>
+<h3>Database Manager (acting) / Senior DBA</h3>
+<div class="org">NSW Lands and Property Information, Australia</div>
+<p>Decision-making role for about 80 instances and 350 databases across two sites, supporting land-tax and spatial systems. Introduced monitoring and standards, led four consultants, and mentored the Informix 11.50/11.70 to 12.10 and ESRI 9.3 to 10.3 upgrades.</p>
+</div>
+</article><article class="job">
+<div class="when">2013 — 2014</div>
+<div>
+<h3>Technical Team Lead, Senior Informix &amp; SQL Server DBA</h3>
+<div class="org">OAMI / OHIM (EU trademark and design office)</div>
+<p>1,000+ Informix databases across 250 instances. Cut query times from minutes to milliseconds.</p>
+</div>
+</article><article class="job">
+<div class="when">2005 — 2013</div>
+<div>
+<h3>DBA and Data Architect</h3>
+<div class="org">NSW Department of Primary Industries · Lumley General</div>
+<p>Sole responsibility for large Informix estates, spatial platforms and insurer underwriting systems. Storage and 64-bit migrations that removed hard limits, introduced change control, and produced large performance gains by measuring before buying hardware.</p>
+</div>
+</article><article class="job">
+<div class="when">1993 — 2005</div>
+<div>
+<h3>Analyst Programmer, DBA and UNIX Consultant</h3>
+<div class="org">About thirty engagements, including government, education and land-registry clients</div>
+<p>Analyst programming, database administration and UNIX consulting across government, education and land-registry engagements.</p>
+</div>
+</article></div><p class="evidence-note">Current-role evidence summary: April 2019–August 2026, 38 graded work items and 553 child issues. Employment is listed as present in the public career summary; the evidence window is not a separate employment end date.</p></section>
+<section id="work"><div class="kicker">02 / Selected delivery</div><h2>Engineering outcomes</h2><p class="intro">Evidence grades are retained from the public career summary. Internal source records are not included.</p><div class="flags"><article class="flag"><div class="grade corr">Corroborated</div><h3>Automated OS patching at estate scale</h3><p>Took operating-system patching from manual, ticket-driven work to scheduled automated patching across the RHEL estate. Ran the gap analysis, built the Ansible and Chef content, and handed the operating model to BAU with runbooks. Later extended to remote-execution patching in production, with no downtime.</p></article><article class="flag"><div class="grade">Confirmed</div><h3>Satellite rebuilt as Terraform</h3><p>Led the migration of a patching platform from CloudFormation-managed infrastructure to Terraform, including production cutover, shared host re-registration, configuration comparison and formal change approval. Production completed without incident.</p></article><article class="flag"><div class="grade">Confirmed</div><h3>Image-building platform, rebuilt as code</h3><p>Replaced a pipeline in which component definitions existed in three places and could drift. Built a Terraform and GitHub Actions pipeline covering seven image types, made the repository the source of truth, and wrote Python tooling to compare production against code.</p></article><article class="flag"><div class="grade">Confirmed</div><h3>Advised against an unjustified migration</h3><p>Analysed whether a broad move to an ARM-based instance family was technically and economically justified. It was not: missing image support, parallel validation paths, vendor package support and lock-in overhead. The recommendation was accepted and the programme paused.</p></article></div></section>
+<section id="skills"><div class="kicker">03 / Technical profile</div><h2>Established experience. Continuing development.</h2><div class="grid2"><article class="panel"><h3>Production engineering</h3><p>AWS; Linux / RHEL; Terraform; Ansible, Chef and AAP; GitHub Actions and Jenkins; RDS, Aurora and Redshift; Informix and SQL Server; IAM, secrets and TLS; Datadog; backup and disaster recovery; Python and automation.</p></article><article class="panel learning"><h3>Current lab development</h3><p>Kubernetes / K3s, Argo CD / GitOps, Helm, EKS patterns, local AWS testing with Floci, and governed AI-assisted SRE. These are current learning and lab work, distinct from established production experience.</p></article></div></section>
+<section><div class="kicker">04 / Public projects</div><h2>Practical engineering labs</h2><p class="intro">Self-healing CI/CD, local AI and homelab platform work, alongside K3s / Argo and Floci experiments. <a href="index.html#projects">Explore the projects and current labs →</a></p></section></main>
+<footer><span>© 2026 Peter Pain · Hastings, UK · Public CV</span><span><a href="index.html">Back to v2 homepage</a> · <a href="https://github.com/dbbloke">GitHub</a></span></footer></div></body></html>
